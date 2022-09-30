@@ -1,0 +1,13 @@
+# dynamic-lists server configuration
+#
+server {
+        listen 80 default_server;
+        root /var/www/lists;
+        index index.html index.htm;
+        location / {
+                root /data/www;
+        }
+        location /lists/ {
+                root /data;
+        }
+}
